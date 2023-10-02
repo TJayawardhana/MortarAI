@@ -1,24 +1,15 @@
-package tc.AIAnalytics;
+package MortarAITestCases.AIAnalytics;
 
 import org.firehouse.Base.TestBase;
 import org.firehouse.MortarPages.AIAnalytics.*;
 import org.firehouse.MortarPages.*;
-import org.firehouse.MortarPages.SocialAndDisplayAdvertising.Facebook;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class CustomerChurnPredictionTC extends TestBase {
-    //NAV BAR
     Login login;
-    Navigation navigation;
     Dashboard dashboard;
-    //ClientDashboard clientDashboard;
     BusinessOverview businessOverview;
-    MyCustomers myCustomer;
-    Integrations integrations;
-    Facebook facebook;
-    Creatives Creatives;
-    //AI Analytics Page
     CustomerChurnPrediction customerChurnPrediction;
     Sales sales;
     Segments segments;
@@ -46,7 +37,7 @@ public class CustomerChurnPredictionTC extends TestBase {
 //        testUtil.switchToFrame();
         try {
             boolean customerChurnTable = customerChurnPrediction.customersChurnListDisplay();
-            Assert.assertTrue(customerChurnTable, "AI analytics Data is not available");
+            Assert.assertTrue(customerChurnTable, "Data is not available");
         } catch (Exception e) {
             boolean customerAiAnalyticsData = customerChurnPrediction.customerNoDataInAIAnalyticsTextCheck();
             Assert.assertTrue(customerAiAnalyticsData, "Error");
@@ -57,46 +48,46 @@ public class CustomerChurnPredictionTC extends TestBase {
     @Test(priority = 2)
     public void verifiedCustomerAtChurnListHeader() {
         String heading = customerChurnPrediction.verifyCustomerChurnListHeaderName();
-        Assert.assertEquals(heading, "Customers at risk of churn", "Customer at risk churn list header is not available");
+        Assert.assertEquals(heading, "Customers at risk of churn", "Customer at risk churn list header is not displaying");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void verifyExportUnderlyingSalesData() {
         customerChurnPrediction.clickOnExportSalesDataButton();
     }
 
-    @Test(priority = 5)
+    @Test(priority = 4)
     public void verifySelectMinimumPurchaseCount() {
         String value = "5";
         customerChurnPrediction.changeTheMinimumPurchaseCount(value);
     }
 
-    @Test(priority = 3)
+    @Test(priority = 5)
     public void verifyGoToSalesPage() {
         sales = customerChurnPrediction.salesLinkClick();
     }
 
-    @Test(priority = 4)
+    @Test(priority = 6)
     public void verifyGoToSegmentsPage() {
         segments = customerChurnPrediction.segmentLinkClick();
     }
 
-    @Test(priority = 5)
+    @Test(priority = 7)
     public void verifyGoToProductsPage() {
         products = customerChurnPrediction.productLinkClick();
     }
 
-    @Test(priority = 6)
+    @Test(priority = 8)
     public void verifyGoToTrendsPage() {
         trends = customerChurnPrediction.trendsLinkClick();
     }
 
-    @Test(priority = 7)
+    @Test(priority = 9)
     public void verifyGoToDemographicsPage() {
         demographic = customerChurnPrediction.demographicLinkClick();
     }
 
-    @Test(priority = 8)
+    @Test(priority = 10)
     public void verifyGoToTargetAudience() {
         targetAudience = customerChurnPrediction.targetAudienceLinkClick();
     }

@@ -1,4 +1,14 @@
 package org.firehouse.MortarPages.DigitalMediaBuying;
 
-public class CreateNewCampaign {
+import org.firehouse.Base.TestBase;
+import org.openqa.selenium.support.PageFactory;
+
+public class CreateNewCampaign extends TestBase {
+    public CreateNewCampaign() {
+        PageFactory.initElements(driver, this);
+    }
+
+    public String verifyCreateNewCampaignPageHeader() {
+        return driver.getTitle();
+    }
 }

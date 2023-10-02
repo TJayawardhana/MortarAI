@@ -5,13 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e67b652-0529-4c6b-928e-1916450705f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/Configurations/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/Configurations/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/CustomerChurnPrediction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/CustomerChurnPrediction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Demographic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Demographic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Sales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Sales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Segments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Segments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/TargetAudience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/TargetAudience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Trends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/AIAnalytics/Trends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/BusinessOverview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/BusinessOverview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/DigitalMediaBuying/CampaignReporting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/DigitalMediaBuying/CampaignReporting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/DigitalMediaBuying/CreateNewCampaign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/DigitalMediaBuying/CreateNewCampaign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/EmailsAndJourneys/Acoustic/AutomatedJourneys.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/EmailsAndJourneys/Acoustic/SingleMailing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/Integrations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/Integrations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/MyCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/MyCustomers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/Navigation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/SocialAndDisplayAdvertising/Facebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/SocialAndDisplayAdvertising/Facebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/SocialAndDisplayAdvertising/GoogleAnalytics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/firehouse/MortarPages/SocialAndDisplayAdvertising/GoogleAnalytics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tc/AIAnalytics/CustomerChurnPredictionTC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MortarAITestCases/AIAnalytics/CustomerChurnPredictionTC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tc/AIAnalytics/SalesTC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MortarAITestCases/AIAnalytics/SalesTC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tc/AIAnalytics/SegmentsTC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MortarAITestCases/AIAnalytics/SegmentsTC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tc/BusinessOverviewTC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MortarAITestCases/BusinessOverviewTC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tc/DashboardTC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MortarAITestCases/DashboardTC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tc/IntegrationsTC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MortarAITestCases/IntegrationsTC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tc/LoginTC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MortarAITestCases/LoginTC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tc/MyCustomersTC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MortarAITestCases/MyCustomersTC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +58,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "E:/MortarAI/MortarAISmokeTestSuite/src/test/java",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Mortar-testCaseWritingNewV2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\MortarAI\MortarAISmokeTestSuite\src\test\java" />
@@ -56,18 +78,90 @@
       <recent name="org.firehouse.util" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.TargetAudienceTC.verifyTrendsPageHeader">
+    <configuration name="DemographicTC.verifyDemographicPageHeader" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MortarAISmokeTestSuite" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MortarAITestCases.AIAnalytics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MortarAITestCases.AIAnalytics" />
+      <option name="MAIN_CLASS_NAME" value="MortarAITestCases.AIAnalytics.DemographicTC" />
+      <option name="METHOD_NAME" value="verifyDemographicPageHeader" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginTC.loginPageTitleTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MortarAISmokeTestSuite" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tc.*" />
+          <option name="PATTERN" value="MortarAITestCases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tc" />
-      <option name="MAIN_CLASS_NAME" value="tc.LoginTC" />
+      <option name="MAIN_CLASS_NAME" value="MortarAITestCases.LoginTC" />
       <option name="METHOD_NAME" value="loginPageTitleTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsTC.verifyProductsPageHeader" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MortarAISmokeTestSuite" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MortarAITestCases.AIAnalytics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MortarAITestCases.AIAnalytics" />
+      <option name="MAIN_CLASS_NAME" value="MortarAITestCases.AIAnalytics.ProductsTC" />
+      <option name="METHOD_NAME" value="verifyProductsPageHeader" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TargetAudienceTC.verifyTrendsPageHeader" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MortarAISmokeTestSuite" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MortarAITestCases.AIAnalytics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MortarAITestCases.AIAnalytics" />
+      <option name="MAIN_CLASS_NAME" value="MortarAITestCases.AIAnalytics.TargetAudienceTC" />
+      <option name="METHOD_NAME" value="verifyTrendsPageHeader" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrendsTC.verifyTrendsPageHeader" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MortarAISmokeTestSuite" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MortarAITestCases.AIAnalytics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MortarAITestCases.AIAnalytics" />
+      <option name="MAIN_CLASS_NAME" value="MortarAITestCases.AIAnalytics.TrendsTC" />
+      <option name="METHOD_NAME" value="verifyTrendsPageHeader" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -77,6 +171,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TargetAudienceTC.verifyTrendsPageHeader" />
+        <item itemvalue="TestNG.DemographicTC.verifyDemographicPageHeader" />
+        <item itemvalue="TestNG.TrendsTC.verifyTrendsPageHeader" />
+        <item itemvalue="TestNG.ProductsTC.verifyProductsPageHeader" />
         <item itemvalue="TestNG.LoginTC.loginPageTitleTest" />
       </list>
     </recent_temporary>

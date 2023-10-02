@@ -63,7 +63,6 @@ public class Sales extends TestBase {
     public String verifyValue2023InYearlySalesByQuarter(){
         return year2023CheckboxValue.getAttribute("value");
     }
-    //
     public void verifySelectYear2020InYearlySalesByQuarter(){
         year2020Checkbox.click();
     }

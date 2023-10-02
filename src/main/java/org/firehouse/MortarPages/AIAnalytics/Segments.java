@@ -9,8 +9,7 @@ public class Segments extends TestBase {
     @FindBy(css = ".btn.btn-secondary.fill-dark")
     WebElement exportUnderlyingSalesDataButton;
 
-    //Customer segment by RFMT
-    //Navigations
+
     @FindBy(id = "ngb-nav-48")
     WebElement customerSegmentByRFMT;
     //Customer segment by product category

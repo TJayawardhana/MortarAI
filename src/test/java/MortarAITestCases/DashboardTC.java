@@ -1,4 +1,4 @@
-package tc;
+package MortarAITestCases;
 
 import org.firehouse.Base.TestBase;
 import org.firehouse.MortarPages.BusinessOverview;
@@ -12,7 +12,6 @@ public class DashboardTC extends TestBase {
     Login loginPage;
     Dashboard dashboardPage, dashboardPage1;
     TestUtil testUtil;
-    //    ClientDashboard clientDashboard;
     BusinessOverview businessOverview;
 
     public DashboardTC() {
@@ -28,13 +27,12 @@ public class DashboardTC extends TestBase {
         businessOverview = new BusinessOverview();
         loginPage = new Login();
         dashboardPage = loginPage.login(prop.getProperty("AdminUsername"), prop.getProperty("AdminPassword"));
-//        clientDashboard = dashboardPage.clickOnGoToClientDashboard();
     }
 
     @Test(priority = 1)
     public void verifyDashboardPageTitleTest() {
         String title = dashboardPage.verifyMortarTitle();
-        Assert.assertEquals(title, "Mortar - Web Portal", "Home page Title is not matched");
+        Assert.assertEquals(title, "Mortar - Web Portal", "Wrong Home Page Header ");
     }
 
     @Test(priority = 2)
@@ -45,8 +43,6 @@ public class DashboardTC extends TestBase {
 
     @Test(priority = 3)
     public void verifySearchABrandTest() {
-//        testUtil.switchToFrame();
-//        dashboardPage.searchABrand("B&M-SankaXYZ");
         dashboardPage.searchABrand("B&M-SankaXYZ2");
     }
 
@@ -61,51 +57,46 @@ public class DashboardTC extends TestBase {
 
         dashboardPage.searchABrand(prop.getProperty("brandName"));
         String searchedUser = dashboardPage.verifySearchedBrand();
-        Assert.assertEquals(searchedUser, prop.getProperty("brandName"), "Searched user is displaying wrong");
+        Assert.assertEquals(searchedUser, prop.getProperty("brandName"), "Wrong searched brand");
     }
 
-//    @Test(priority = 6)
-//    public void verifyStatusFilterIsClickable() {
-//        dashboardPage.clickStatusFilter();
-//        Assert.assertTrue(dashboardPage.statusFilterDropdown(), "Status filter is not Opened");
-//    }
 
-    @Test(priority = 7)
+    @Test(priority = 6)
     public void verifyStatusFilterSelectAllIsSelected() {
         dashboardPage.clickStatusFilter();
-        Assert.assertTrue(dashboardPage.selectAllIsSelected(), "Select All is Not Selected");
+        Assert.assertTrue(dashboardPage.selectAllIsSelected(), "Select All button is Not Selected");
+    }
+
+    @Test(priority = 7)
+    public void verifyStatusFilterSetupRequiredIsSelected() {
+        dashboardPage.clickStatusFilter();
+        Assert.assertTrue(dashboardPage.setupRequiredIsSelected(), "Setup Required button is Not Selected");
     }
 
     @Test(priority = 8)
-    public void verifyStatusFilterSetupRequiredIsSelected() {
+    public void verifyStatusFilterActiveIsSelected() {
         dashboardPage.clickStatusFilter();
-        Assert.assertTrue(dashboardPage.setupRequiredIsSelected(), "Setup Required is Not Selected");
+        Assert.assertTrue(dashboardPage.activeIsSelected(), "Active button is Not Selected");
     }
 
     @Test(priority = 9)
-    public void verifyStatusFilterActiveIsSelected() {
+    public void verifyStatusFilterInactiveIsSelected() {
         dashboardPage.clickStatusFilter();
-        Assert.assertTrue(dashboardPage.activeIsSelected(), "Active is Not Selected");
+        Assert.assertTrue(dashboardPage.inactiveIsSelected(), "Inactive button is Not Selected");
     }
 
     @Test(priority = 10)
-    public void verifyStatusFilterInactiveIsSelected() {
-        dashboardPage.clickStatusFilter();
-        Assert.assertTrue(dashboardPage.inactiveIsSelected(), "Inactive is Not Selected");
-    }
-
-    @Test(priority = 11)
     public void verifyStatusFilterSelectAllTheSelectAllValues() throws InterruptedException {
         dashboardPage.clickStatusFilter();
-        Assert.assertTrue(dashboardPage.selectAllIsSelected(), "Select All is Not Selected");
+        Assert.assertTrue(dashboardPage.selectAllIsSelected(), "Select All button is Not Selected");
         boolean selectAllStatus = dashboardPage.selectAllIsSelected();
         if (selectAllStatus) {
-            Assert.assertTrue(dashboardPage.setupRequiredIsSelected(), "Setup Required is Not Selected");
-            Assert.assertTrue(dashboardPage.activeIsSelected(), "Active is Not Selected");
-            Assert.assertTrue(dashboardPage.inactiveIsSelected(), "Inactive is Not Selected");
+            Assert.assertTrue(dashboardPage.setupRequiredIsSelected(), "Setup Required button is Not Selected");
+            Assert.assertTrue(dashboardPage.activeIsSelected(), "Active button is Not Selected");
+            Assert.assertTrue(dashboardPage.inactiveIsSelected(), "Inactive button is Not Selected");
         }
     }
-    @Test(priority = 12)
+    @Test(priority = 11)
     public void verifyStatusFilterSelectAllDeselect() throws InterruptedException {
         dashboardPage.clickStatusFilter();
         boolean selectAllStatus = dashboardPage.selectAllIsSelected();
@@ -117,7 +108,7 @@ public class DashboardTC extends TestBase {
             Assert.assertFalse(dashboardPage.inactiveIsSelected(), "Successfully Deselected the Inactive Checkbox");
         }
     }
-    @Test(priority = 13)
+    @Test(priority = 12)
     public void verifyStatusFilterOnlySetupRequiredDeselect() {
         dashboardPage.clickStatusFilter();
         boolean setupRequiredStatus = dashboardPage.setupRequiredIsSelected();
@@ -129,7 +120,7 @@ public class DashboardTC extends TestBase {
             Assert.assertTrue(dashboardPage.inactiveIsSelected(), "Successfully Deselected the Inactive Checkbox");
         }
     }
-    @Test(priority = 14)
+    @Test(priority = 13)
     public void verifyStatusFilterOnlyActiveDeselect() {
         dashboardPage.clickStatusFilter();
         boolean activeStatus = dashboardPage.activeIsSelected();
@@ -141,7 +132,7 @@ public class DashboardTC extends TestBase {
             Assert.assertTrue(dashboardPage.inactiveIsSelected(), "Selected the Inactive Checkbox");
         }
     }
-    @Test(priority = 15)
+    @Test(priority = 14)
     public void verifyStatusFilterOnlyInactiveDeselect() {
         dashboardPage.clickStatusFilter();
         boolean inactiveStatus = dashboardPage.inactiveIsSelected();
@@ -154,7 +145,7 @@ public class DashboardTC extends TestBase {
         }
     }
 
-    @Test(priority = 16)
+    @Test(priority = 15)
     public void verifiedPreviousDisableWhenLoggedIntoDashboard() throws InterruptedException {
         Thread.sleep(10000);
         try {
@@ -165,10 +156,10 @@ public class DashboardTC extends TestBase {
         }
     }
 
-    @Test(priority = 17)
+    @Test(priority = 16)
     public void verifyNextButtonIsClickableWhenMultiplePagesAreAvailable() {
         boolean isUnclickable = dashboardPage.verifyNextButtonIsDisableInDashboardsLastPage();
-        Assert.assertTrue(isUnclickable, "Next Button is unclickable ");
+        Assert.assertTrue(isUnclickable, "Next Button is not clickable ");
         dashboardPage.clickOnNextButtonOnPagination();
     }
 
@@ -177,7 +168,7 @@ public class DashboardTC extends TestBase {
         dashboardPage.clickOnNextButtonOnPagination();
 
     }
-    @Test(priority = 19)
+    @Test(priority = 18)
     public void verifiedNavigateToAllPagesFromNavigation() throws InterruptedException {
         dashboardPage.verifyNavigateToAllAvailablePages();
     }

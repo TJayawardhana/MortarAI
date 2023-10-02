@@ -1,4 +1,4 @@
-package tc;
+package MortarAITestCases;
 
 import org.firehouse.Base.TestBase;
 import org.firehouse.MortarPages.BusinessOverview;
@@ -32,32 +32,32 @@ public class LoginTC extends TestBase {
     @Test(priority = 1)
     public void loginPageTitleTest() {
         String title = login.verifyLoginPageHeader();
-        Assert.assertEquals(title, "Sign in to mortar", "Title is wrong");
+        Assert.assertEquals(title, "Sign in to mortar", "Wrong page header");
     }
 
     @Test(priority = 2)
     public void verifyLoginPageHeader(){
         boolean header = login.verifyLogInPageHeader();
-        Assert.assertTrue(header,"Login page header title is not available");
+        Assert.assertTrue(header,"Login page header is not available");
     }
 
     @Test(priority = 3)
     public void verify (){
-        Assert.assertTrue(login.verifyLoginUserNameVisibility(),"UserName Field is Not Visible");
+        Assert.assertTrue(login.verifyLoginUserNameVisibility(),"UserName text Field is Not available");
     }
     @Test(priority = 4)
     public void verifyPasswordInputFieldIsVisible(){
-        Assert.assertTrue(login.verifyLoginPasswordVisibility(),"Password Field is Not Visible");
+        Assert.assertTrue(login.verifyLoginPasswordVisibility(),"Password text Field is Not available");
     }
     @Test(priority = 5)
     public void verifyLoginButtonIsVisible(){
-        Assert.assertTrue(login.verifyLoginButton(),"Password Field is Not Visible");
+        Assert.assertTrue(login.verifyLoginButton(),"Password text Field is Not available");
     }
     @Test(priority = 6)
     public void verifyLoginButtonClickable(){
         login.verifyLoginButtonClickable();
         boolean errorMsg = login.getErrorMessage();
-        Assert.assertTrue(errorMsg, "Login failed! Please check your username and password and try again.");
+        Assert.assertTrue(errorMsg, "Login failed! Please check your credentials and try again.");
     }
     @Test(priority = 7)
     public void accountManagerLoginWithValidCredentialsTest() {
@@ -65,18 +65,15 @@ public class LoginTC extends TestBase {
 
     @Test(priority = 8)
     public void accountManagerLoginWithInvalidEmailCredentials() {
-        String invalidEmail = "Sankaw233@dmk";
+        String invalidEmail = "Tim2332@dmk";
         login.login(invalidEmail, prop.getProperty("AdminPassword"));
-      /*  loginPage.getErrorMessage();
-        System.out.println("Login Error");*/
         boolean errorMsg = login.getErrorMessage();
         Assert.assertTrue(errorMsg, "Error Message not popped up");
-//        Assert.assertTrue(loginPage.getErrorMessage(),"Login failed! Please check your username and password and try again.");
     }
 
     @Test(priority = 9)
     public void accountManagerLoginWithInvalidPasswordCredentials() {
-        String invalidPassword = "Sankaw233@dmk";
+        String invalidPassword = "Tim2332@dmk";
         login.login(prop.getProperty("AdminUsername"), invalidPassword);
         boolean errorMsg = login.getErrorMessage();
         Assert.assertTrue(errorMsg, "Error Message not popped up");
@@ -94,7 +91,7 @@ public class LoginTC extends TestBase {
 
     @Test(priority = 11)
     public void businessOwnerLoginWithInvalidPasswordCredentials() {
-        String invalidPassword = "Sankaw233@dmk";
+        String invalidPassword = "Tim2332@dmk";
         businessOverview = login.loginAsUser(prop.getProperty("Username"), invalidPassword);
         boolean errorMsg = login.getErrorMessage();
         Assert.assertTrue(errorMsg,"Error Message not popped up");
@@ -102,7 +99,7 @@ public class LoginTC extends TestBase {
 
     @Test(priority = 12)
     public void businessOwnerLoginWithInvalidEmailCredentials() {
-        String invalidEmail = "Sankaw233@dmk";
+        String invalidEmail = "Tim2332@dmk";
         businessOverview = login.loginAsUser(prop.getProperty("Username"), invalidEmail);
         boolean errorMsg = login.getErrorMessage();
         Assert.assertTrue(errorMsg, "Error Message not popped up");

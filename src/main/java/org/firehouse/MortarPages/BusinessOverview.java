@@ -5,7 +5,7 @@ import org.firehouse.Base.TestBase;
 import org.firehouse.MortarPages.AIAnalytics.CustomerChurnPrediction;
 import org.firehouse.MortarPages.DigitalMediaBuying.CampaignReporting;
 import org.firehouse.MortarPages.DigitalMediaBuying.CreateNewCampaign;
-import org.firehouse.MortarPages.EmailsAndJourneys.Acoustic.SingleMailing;
+import org.firehouse.MortarPages.EmailsAndJourneys.Acoustic;
 import org.firehouse.MortarPages.SocialAndDisplayAdvertising.Facebook;
 import org.firehouse.MortarPages.SocialAndDisplayAdvertising.GoogleAnalytics;
 import org.openqa.selenium.By;
@@ -167,9 +167,9 @@ public class BusinessOverview extends TestBase {
         return new Integrations();
     }
 
-    public SingleMailing clickOnGoToEmailsAndJourneys() {
+    public Acoustic clickOnGoToEmailsAndJourneys() {
         navEmailsAndJourneyLink.click();
-        return new SingleMailing();
+        return new Acoustic();
     }
 
     public void clickOnNavSocialDisplayAdvertisingLink() {
@@ -182,7 +182,7 @@ public class BusinessOverview extends TestBase {
         return new Facebook();
     }
 
-    public GoogleAnalytics clickOnGoToAIAnalyticsPage() {
+    public GoogleAnalytics clickOnGoToAIAnalytics() {
         navSocialDisplayAdvertisingLink.click();
         navGoogleAnalyticsPageLink.click();
         return new GoogleAnalytics();

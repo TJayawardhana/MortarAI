@@ -3,7 +3,7 @@ package org.firehouse.MortarPages.AIAnalytics;
 import org.firehouse.Base.TestBase;
 import org.firehouse.MortarPages.BusinessOverview;
 import org.firehouse.MortarPages.Creatives;
-import org.firehouse.MortarPages.EmailsAndJourneys.Acoustic.SingleMailing;
+import org.firehouse.MortarPages.EmailsAndJourneys.Acoustic;
 import org.firehouse.MortarPages.Integrations;
 import org.firehouse.MortarPages.MyCustomers;
 import org.firehouse.MortarPages.SocialAndDisplayAdvertising.Facebook;
@@ -117,9 +117,9 @@ public class CustomerChurnPrediction extends TestBase {
         navIntegrationsLink.click();
         return new Integrations();
     }
-    public SingleMailing clickOnGoToEmailsAndJourneys() {
+    public Acoustic clickOnGoToEmailsAndJourneys() {
         navEmailsAndJourneyLink.click();
-        return new SingleMailing();
+        return new Acoustic();
     }
     public Facebook clickOnGoToSocialAndDisplayAdvertising() {
         navSocialDisplayAdvertisingLink.click();
