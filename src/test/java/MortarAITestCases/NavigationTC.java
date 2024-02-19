@@ -1,12 +1,11 @@
 package MortarAITestCases;
 
 import org.firehouse.Base.TestBase;
+import org.firehouse.IntegrationPage;
 import org.firehouse.MortarPages.*;
 import org.firehouse.MortarPages.AIAnalytics.CustomerChurnPrediction;
 import org.firehouse.MortarPages.DigitalMediaBuying.CampaignReporting;
 import org.firehouse.MortarPages.DigitalMediaBuying.CreateNewCampaign;
-import org.firehouse.MortarPages.SocialAndDisplayAdvertising.Facebook;
-import org.firehouse.MortarPages.SocialAndDisplayAdvertising.GoogleAnalytics;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -19,12 +18,9 @@ public class NavigationTC extends TestBase {
     Dashboard dashboard;
     BusinessOverview businessOverview;
     MyCustomers myCustomer;
-    Integrations integrations;
-    Facebook facebook;
-    GoogleAnalytics googleAnalytics;
+    IntegrationPage integrations;
     CampaignReporting campaignReporting;
     CreateNewCampaign createNewCampaign;
-    Creatives myCreatives;
     CustomerChurnPrediction customerChurnPrediction;
     public NavigationTC() {
         super();
@@ -87,15 +83,6 @@ public class NavigationTC extends TestBase {
         System.out.println("Navigate to Mails And Journeys Sub Menu ");
         Thread.sleep(5000);
     }
-    @Test(priority = 9)
-    public void verifiedClickToGoToSingleMailingInEmailsAndJourney() throws InterruptedException {
-        navigation.clickOnOpenSubMenuEmailsAndJourneys();
-        System.out.println("Navigate to Mails And Journeys Sub Menu ");
-        Thread.sleep(5000);
-        navigation.clickOnGoToSingleMailingInEmailsAndJourneyPage();
-        Thread.sleep(5000);
-        System.out.println("Navigate to Single Mailing Page in Mails And Journeys");
-    }
     @Test(priority = 10)
     public void verifiedClickGoToKlaviyoDashboardInEmailsAndJourney() throws InterruptedException {
         navigation.clickOnOpenSubMenuEmailsAndJourneys();
@@ -111,20 +98,6 @@ public class NavigationTC extends TestBase {
     public void VerifyOpeningSocialDisplayAdvertisingSubNavBar() {
         navigation.clickOnOpenSubMenuNavSocialDisplayAdvertising();
         System.out.println("Navigate to Social Display Advertising Sub Navigation Bar");
-    }
-
-    @Test(priority = 12)
-    public void verifyClickGoToFacebookAdvertisingPageTest() {
-        navigation.clickOnOpenSubMenuNavSocialDisplayAdvertising();
-        facebook = businessOverview.clickOnGoToFacebookAdvertisingPage();
-        System.out.println("Navigate to Facebook Advertising");
-    }
-
-    @Test(priority = 13)
-    public void verifyClickGoToGoogleAnalyticsPageTest() {
-        navigation.clickOnOpenSubMenuNavSocialDisplayAdvertising();
-        googleAnalytics = navigation.clickOnGoToGoogleAnalyticsReportingPage();
-        System.out.println("Navigate to Google Analytics Reporting");
     }
 
     @Test(priority = 14)
@@ -147,11 +120,6 @@ public class NavigationTC extends TestBase {
         System.out.println("Navigate to Create New CampaignPage");
     }
 
-    @Test(priority = 17)
-    public void verifyClickGoToMyCreativesTest() {
-        myCreatives = navigation.clickOnGoToMyCreatives();
-        System.out.println("Navigate to My Creatives");
-    }
 
 
 }

@@ -12,7 +12,7 @@ public class CustomerChurnPredictionTC extends TestBase {
     BusinessOverview businessOverview;
     CustomerChurnPrediction customerChurnPrediction;
     Sales sales;
-    Segments segments;
+    SegmentsByRFMT segments;
     Products products;
     Trends trends;
     Demographic demographic;

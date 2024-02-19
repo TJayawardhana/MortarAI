@@ -1,23 +1,21 @@
-package MortarAITestCases.AIAnalytics;
-
+package MortarAITestCases;
 
 import org.firehouse.Base.TestBase;
-import org.firehouse.MortarPages.AIAnalytics.CustomerChurnPrediction;
-import org.firehouse.MortarPages.AIAnalytics.Products;
-import org.firehouse.MortarPages.AIAnalytics.SegmentsByRFMT;
+import org.firehouse.IntegrationPage;
 import org.firehouse.MortarPages.BusinessOverview;
 import org.firehouse.MortarPages.Dashboard;
 import org.firehouse.MortarPages.Login;
+import org.firehouse.MortarPages.Navigation;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class ProductsTC extends TestBase {
+public class IntegrationTC extends TestBase {
+
     Login login;
+    Navigation navigationBar;
     Dashboard dashboard;
-    Products products;
     BusinessOverview businessOverview;
-    CustomerChurnPrediction customerChurnPrediction;
-    SegmentsByRFMT segments;
+    IntegrationPage integrationPage;
 
     @Parameters({"browser.name"})
     @BeforeMethod
@@ -26,21 +24,17 @@ public class ProductsTC extends TestBase {
         login = new Login();
         dashboard = login.login(prop.getProperty("AdminUsername"), prop.getProperty("AdminPassword"));
         businessOverview = dashboard.searchABrandAndGoToBusinessOverview(prop.getProperty("brandName"));
-        customerChurnPrediction = businessOverview.clickOnGoToCustomerChurnPredictionAIAnalytics();
-        segments = customerChurnPrediction.segmentLinkClick();
-        products = customerChurnPrediction.productLinkClick();
+        integrationPage = navigationBar.clickOnGoToIntegrations();
     }
 
     @Test(priority = 1)
-    public void verifyProductsPageHeader() {
-        String title = products.verifyProductsPageHeader();
-        Assert.assertEquals(title, "Mortar - Web Portal", "Wrong page header");
+    public void IntegrationPageTitleTest() {
+        String title = integrationPage.verifyPageTitle();
+        Assert.assertEquals(title, "Mortar - Web Portal", "Title is wrong");
     }
-
     @AfterMethod
     public void tearDown() {
-        driver.quit();
+        driver.close();
     }
-
-
 }
+

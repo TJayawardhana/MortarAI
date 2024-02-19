@@ -17,7 +17,6 @@ public class KlaviyoTC extends TestBase {
     Dashboard dashboard;
     BusinessOverview businessOverview;
 
-    CampaignReporting campaignReporting;
 
     @Parameters({"browser.name"})
     @BeforeMethod

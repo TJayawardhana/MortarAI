@@ -1,12 +1,9 @@
 package org.firehouse.MortarPages.AIAnalytics;
 
 import org.firehouse.Base.TestBase;
+import org.firehouse.IntegrationPage;
 import org.firehouse.MortarPages.BusinessOverview;
-import org.firehouse.MortarPages.Creatives;
-import org.firehouse.MortarPages.EmailsAndJourneys.Acoustic;
-import org.firehouse.MortarPages.Integrations;
 import org.firehouse.MortarPages.MyCustomers;
-import org.firehouse.MortarPages.SocialAndDisplayAdvertising.Facebook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -113,19 +110,12 @@ public class CustomerChurnPrediction extends TestBase {
         navMyCustomersLink.click();
         return new MyCustomers();
     }
-    public Integrations clickOnGoToIntegrations() {
+    public IntegrationPage clickOnGoToIntegrations() {
         navIntegrationsLink.click();
-        return new Integrations();
+        return new IntegrationPage();
     }
-    public Acoustic clickOnGoToEmailsAndJourneys() {
-        navEmailsAndJourneyLink.click();
-        return new Acoustic();
-    }
-    public Facebook clickOnGoToSocialAndDisplayAdvertising() {
-        navSocialDisplayAdvertisingLink.click();
-//        navFacebookAdvertisingLink.click();
-        return new Facebook();
-    }
+
+
     public Creatives clickOnGoToMyCreatives() {
         navMyCreativesLink.click();
         return new Creatives();
@@ -155,9 +145,9 @@ public class CustomerChurnPrediction extends TestBase {
         salesLink.click();
         return new Sales();
     }
-    public Segments segmentLinkClick(){
+    public SegmentsByRFMT segmentLinkClick(){
         segmentLink.click();
-        return new Segments();
+        return new SegmentsByRFMT();
     }
     public Products productLinkClick(){
         productsLink.click();

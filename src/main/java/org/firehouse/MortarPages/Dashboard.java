@@ -8,18 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static org.firehouse.Base.TestBase.driver;
 
 public class Dashboard extends TestBase {
     @FindBy(xpath = "//h1[contains(text(),'Dashboard')]")
     WebElement dashboardLabel;
-    // xpath=//h1[contains(.,'DashboardPage')]
-
-    //B&M-SankaXYZ Button to go to dashboard
     @FindBy(css = ".btn.btn-client-dashboard")
     WebElement goToBrandDashboardDirectButton;
-    @FindBy(css = ".btn.btn-client-dashboard")
-//    @FindBy(css = ".btn.btn-client-dashboard.ng-star-inserted.ng-tns-c198-4")
+    @FindBy(xpath = "//button[@class='btn btn-mortar-Primary ng-tns-c203-0 ng-star-inserted']")
     WebElement goToSearchedDashboardButton;
     @FindBy(css = "[class='table-space ng-tns-c198-4 ng-star-inserted']")
     WebElement searchedCustomerName;
@@ -30,8 +25,6 @@ public class Dashboard extends TestBase {
     @FindBy(id = "search")
     WebElement placeholderSearchClient;
 
-    /*@FindBy(xpath="//button[contains(text(),'Search')]")
-    WebElement brandSearchButton;*/
     @FindBy(id = "submitButton")
     WebElement brandSearchButton;
     @FindBy(id = "dropdownBasic1")
@@ -58,8 +51,7 @@ public class Dashboard extends TestBase {
     WebElement searchedCustomer;
     @FindBy(css = ".ng-star-inserted.pagination-previous")
     WebElement previousButtonOnPagination;
-    //    @FindBy(css = ".ng-star-inserted.pagination-next")
-//    @FindBy(css = ".ng-star-inserted.pagination-next")
+
     @FindBy(xpath = "//pagination-controls[@id='listing_users']/pagination-template/ul/li[5]/a")
     WebElement nextButtonOnPagination;
     @FindBy(css = ".disabled.ng-star-inserted.pagination-next")
@@ -69,16 +61,6 @@ public class Dashboard extends TestBase {
     @FindBy(xpath = "//span[contains(text(),'3')]")
     WebElement pageNumber3;
 
-    /**
-     * Validate Checkbox isSelected method and click
-
-     WebElement checkBoxElement = driver.findElement(By.cssSelector("label[for='hobbies-checkbox-1']"));
-     boolean isSelected = checkBoxElement.isSelected();
-
-     //performing click operation if element is not checked
-     if(isSelected == false) {
-     checkBoxElement.click();
-     }*/
 
     //Initializing the Page Objects;
     public Dashboard() {
@@ -93,10 +75,7 @@ public class Dashboard extends TestBase {
         return dashboardLabel.isDisplayed();
     }
 
-    /*public void searchABrand(String brandName){
-         placeholderSearchClient.sendKeys(brandName);
-        brandSearchButton.click();
-    }*/
+
     public void searchABrand(String brandName) {
         placeholderSearchClient.sendKeys(brandName);
         brandSearchButton.click();

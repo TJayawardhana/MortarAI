@@ -37,18 +37,17 @@ public class DashboardTC extends TestBase {
 
     @Test(priority = 2)
     public void verifyDashboardTextTest() {
-//        testUtil.switchToFrame();
         Assert.assertTrue(dashboardPage.verifyDashboardText());
+
     }
 
     @Test(priority = 3)
     public void verifySearchABrandTest() {
-        dashboardPage.searchABrand("B&M-SankaXYZ2");
+        dashboardPage.searchABrand("Modern Bliss Oak_TJ");
     }
 
     @Test(priority = 4)
     public void verifyClickGoToBrandDashboardTest() {
-//        testUtil.switchToFrame();
         businessOverview = dashboardPage.clickOnGoToClientsBusinessOverView();
     }
 

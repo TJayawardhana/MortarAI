@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Segments extends TestBase {
+public class SegmentsByRFMT extends TestBase {
     @FindBy(css = ".btn.btn-secondary.fill-dark")
     WebElement exportUnderlyingSalesDataButton;
 
@@ -80,7 +80,7 @@ public class Segments extends TestBase {
     WebElement demographicLocationMapCanvas;
     //
 
-    public Segments() {
+    public SegmentsByRFMT() {
         PageFactory.initElements(driver, this);
     }
 
@@ -99,7 +99,6 @@ public class Segments extends TestBase {
 
     public boolean checkOneOffIsDisable() {
         return Boolean.parseBoolean(oneOffTab.getAttribute("aria-disabled"));
-//        return oneOffTab.getAttribute("aria-disabled");
     }
 
     public void clickOnOneOffTab() {

@@ -2,12 +2,10 @@ package org.firehouse.MortarPages;
 
 
 import org.firehouse.Base.TestBase;
+import org.firehouse.IntegrationPage;
 import org.firehouse.MortarPages.AIAnalytics.CustomerChurnPrediction;
 import org.firehouse.MortarPages.DigitalMediaBuying.CampaignReporting;
 import org.firehouse.MortarPages.DigitalMediaBuying.CreateNewCampaign;
-import org.firehouse.MortarPages.EmailsAndJourneys.Acoustic;
-import org.firehouse.MortarPages.SocialAndDisplayAdvertising.Facebook;
-import org.firehouse.MortarPages.SocialAndDisplayAdvertising.GoogleAnalytics;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,8 +16,6 @@ public class BusinessOverview extends TestBase {
     WebElement verifyBusinessOverviewPage;
     @FindBy(xpath = "//li[contains(text(),'B&M-SankaXYZ')]")
     WebElement businessOwnerID;
-    //NAVBAR//////////////
-    //Business Overview Button
     @FindBy(xpath = "//span[contains(text(),'Business Overview')]")
     WebElement navBusinessOverviewLink;
 
@@ -35,13 +31,9 @@ public class BusinessOverview extends TestBase {
     @FindBy(xpath = "//span[contains(text(),'Integrations')]")
     WebElement navIntegrationsLink;
 
-    //Emails & Journeys From Nav Bar
-//    @FindBy(xpath = "//span[contains(text(),'Emails & Journeys')]")
     @FindBy(xpath = "//li[5]/div")
     WebElement navEmailsAndJourneyLink;
 
-    //Social & Display Advertising From Nav Bar
-//    @FindBy(xpath = "//span[contains(text(),'Social & Display Advertising')]")
     @FindBy(css = "[data-intercom-target='Social \\& Display Advertising'] .nav-text")
     WebElement navSocialDisplayAdvertisingLink;
     @FindBy(css = "[href='\\/social-and-display-ads\\/facebook'] .item-name")
@@ -137,10 +129,6 @@ public class BusinessOverview extends TestBase {
         return verifyBusinessOverviewPage.isDisplayed();
     }
 
-    /*public boolean verifyClientName(String brandNameVerify) {
-        WebElement verifyName = driver.findElement(By.xpath("//li[contains(text(),'" + brandNameVerify + "')]"));
-        return verifyName.isDisplayed();
-    }*/
 
     public boolean verifyBusinessOwnerID(String businessOwnerId) {
         return driver.findElement(By.xpath("//li[contains(" +
@@ -162,31 +150,16 @@ public class BusinessOverview extends TestBase {
         return new MyCustomers();
     }
 
-    public Integrations clickOnGoToIntegrations() {
+    public IntegrationPage clickOnGoToIntegrations() {
         navIntegrationsLink.click();
-        return new Integrations();
+        return new IntegrationPage();
     }
 
-    public Acoustic clickOnGoToEmailsAndJourneys() {
-        navEmailsAndJourneyLink.click();
-        return new Acoustic();
-    }
 
     public void clickOnNavSocialDisplayAdvertisingLink() {
         navSocialDisplayAdvertisingLink.click();
     }
 
-    public Facebook clickOnGoToFacebookAdvertisingPage() {
-        navSocialDisplayAdvertisingLink.click();
-        navFacebookAdvertisingPageLink.click();
-        return new Facebook();
-    }
-
-    public GoogleAnalytics clickOnGoToAIAnalytics() {
-        navSocialDisplayAdvertisingLink.click();
-        navGoogleAnalyticsPageLink.click();
-        return new GoogleAnalytics();
-    }
 
     public void clickOnNavDigitalMediaBuying() {
         navDigitalMediaBuyingLink.click();
@@ -203,11 +176,6 @@ public class BusinessOverview extends TestBase {
 
         campaignCreatingPageLink.click();
         return new CreateNewCampaign();
-    }
-
-    public Creatives clickOnGoToMyCreatives() {
-        navMyCreativesLink.click();
-        return new Creatives();
     }
 
     public boolean verifyConversionGraphHeader() {

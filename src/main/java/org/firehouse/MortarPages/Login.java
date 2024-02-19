@@ -7,14 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Login extends TestBase {
-    //Page Factory - OR:
     @FindBy(id = "username")
     WebElement username;
 
     @FindBy(id = "password")
     WebElement password;
 
-    //    @FindBy(xpath = "//button[@type='submit']")
     @FindBy(id = "kc-login")
     WebElement loginBtn;
     @FindBy(id = "kc-page-title")

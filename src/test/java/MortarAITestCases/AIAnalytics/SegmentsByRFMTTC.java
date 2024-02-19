@@ -3,7 +3,7 @@ package MortarAITestCases.AIAnalytics;
 
 import org.firehouse.Base.TestBase;
 import org.firehouse.MortarPages.AIAnalytics.CustomerChurnPrediction;
-import org.firehouse.MortarPages.AIAnalytics.Segments;
+import org.firehouse.MortarPages.AIAnalytics.SegmentsByRFMT;
 import org.firehouse.MortarPages.BusinessOverview;
 import org.firehouse.MortarPages.Dashboard;
 import org.firehouse.MortarPages.Login;
@@ -13,12 +13,12 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class SegmentsTC extends TestBase {
+public class SegmentsByRFMTTC extends TestBase {
     Login login;
     Dashboard dashboard;
     BusinessOverview businessOverview;
     CustomerChurnPrediction customerChurnPrediction;
-    Segments segments;
+    SegmentsByRFMT segments;
 
     @Parameters({"browser.name"})
     @BeforeMethod
